@@ -4,4 +4,5 @@ class MyPlanet:
         self.elementsvitaux = ["https" "internet", "github" , "descripteur"]
         self.fonction = ["stockage","descripteur","modeles","passerelle","source"]
         self.chaine = ["local","descripteurs","git","descripteur"]
-
+        self.version = 0.01z
+        self.sum = "file.sum"
