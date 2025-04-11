@@ -23,24 +23,23 @@ class MyGit(MyPlanet):
     def writememory(self,x):
         print("copie en memoire de ",x)
         self.fichier_content = [x,self.connapi.get_user().get_repo("trashcode").get_contents(x)]
-        print("Termine ",x)
-        self.didi = self.writedisk(x)
+        print("mem Termine ",x)
+        self.writedisk(x)
         return self.fichier_content
 
 
     def writedisk(self,x):
         print(self.fichier_content)
         print("ecriture sur le disque")
-        with open(x, "w") as file
+        with open(x, "w") as file:
             file.write(self.fichier_content[1].decoded_content.decode())
-        print("termine")
-        return os.walk("./",x)
+        print("dsk termine")
 
     def clone(self):
         with Pool(len(self.fichiers)) as p:
             print("go")
             return p.map( self.writememory,self.fichiers)
-            
+
     def representer(self):
         pass
     def envoyer(self):
