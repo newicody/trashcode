@@ -2,11 +2,11 @@ import hashlib
 
 class MyPlanet:
     def __init__(self):
-        self.fichiers = ["planet.py","git.py","launcher.py"]
+        self.fichiers = ["planet.py","gitget.py","gitput.py","gitcompare.py"]
         self.elementsvitaux = ["https" "internet", "github" , "descripteur"]
         self.fonction = ["stockage","descripteur","modeles","passerelle","source"]
         self.chaine = ["local","descripteurs","git","descripteur"]
-        self.version = "v0.01z" # ou r pour release
+        self.version = "v0.01z" # branche = n.nn - version = x
         self.sum = "planet.md5"
 
     def create_sum(self):
