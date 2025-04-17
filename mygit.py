@@ -3,7 +3,7 @@ from github import Github, Auth
 import os
 from multiprocessing import Pool
 
-class GitGet(MyPlanet):
+class MyGit(MyPlanet):
     def config(self,fichier="etc/apikey.txt"):
         self.api = self.apiopen(fichier)
         self.repository = "trashcode"
@@ -41,12 +41,10 @@ class GitGet(MyPlanet):
 
     def representer(self):
         pass
-    
     def envoyer(self):
         pass
-
-get = GetGit()
-get.config()
-get.connect()
-get.memory = get.clone()
-get.disk = os.walk("./")
+git = MyGit()
+git.config()
+#git.connect()
+#git.memory = git.clone()
+#git.disk = os.walk("./")
