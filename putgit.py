@@ -1,4 +1,4 @@
-from myplanet import MyPlanet
+from planet import MyPlanet
 from github import Github, Auth
 import os
 from multiprocessing import Pool

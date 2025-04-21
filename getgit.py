@@ -1,9 +1,10 @@
-from myplanet import MyPlanet
+from planet import MyPlanet
 from github import Github, Auth
 import os
 from multiprocessing import Pool
+from comparegit import CompareGit
 
-class GitGet(MyPlanet):
+class GetGit(MyPlanet):
     def config(self,fichier="etc/apikey.txt"):
         self.api = self.apiopen(fichier)
         self.repository = "trashcode"
@@ -50,3 +51,6 @@ get.config()
 get.connect()
 get.memory = get.clone()
 get.disk = os.walk("./")
+
+localcompar = CompareGit()
+localcompar.compare()
